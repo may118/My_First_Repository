@@ -1,5 +1,6 @@
-source("findAvg.R")
-source("readData.R")
+#need to reference the subdirectory in order for the devtools::document() to find the files
+source(".//R//findAvg.R")
+source("./R//readData.R")
 
 #import data from chamber matlab file
 rsIn = readData('chamData.mat')
@@ -22,6 +23,7 @@ while(i<6)
 par(mar = c(1,1,1,1))
 par(mfrow=c(5,1))
 
+#plot the 5 years
 for (i in 1:5)
 {
   plot(master[[i]])

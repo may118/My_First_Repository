@@ -7,10 +7,7 @@
 
 readData <- function(name)
 {
-
   library(R.matlab)
-
-  data <- readMat(name)
+  data <- R.matlab::readMat(name)
   return(data)
 }
-

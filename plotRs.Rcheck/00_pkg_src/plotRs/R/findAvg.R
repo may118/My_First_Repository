@@ -1,6 +1,6 @@
 #' Uses inported Rs data to find the average of each year
 #'
-#' @param data data list from imported matlab data
+#' @param data list from imported matlab data
 #' @param idx the index of the year you like
 #'            1 = 2014
 #'            2 = 2015
@@ -9,7 +9,7 @@
 #'            5 = 2018
 #' @return average data
 #' @examples
-#' getRsAvg(rsIn)
+#' findAvg(rsIn)
 
 findAvg <- function(data,idx)
 {
