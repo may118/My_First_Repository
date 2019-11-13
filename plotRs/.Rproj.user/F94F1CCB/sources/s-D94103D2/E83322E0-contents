@@ -8,6 +8,7 @@
 #'            4 = 2017
 #'            5 = 2018
 #' @return average data
+#' @export
 #' @examples
 #' findAvg(rsIn)
 
