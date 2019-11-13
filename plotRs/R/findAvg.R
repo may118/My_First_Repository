@@ -9,8 +9,10 @@
 #'            5 = 2018
 #' @return average data
 #' @export
-#' @examples
-#' findAvg(rsIn)
+
+
+# @examples
+# findAvg(rsIn)
 
 findAvg <- function(data,idx)
 {
@@ -27,7 +29,7 @@ findAvg <- function(data,idx)
   for(i in 1:dim(data_idx)[1])
   {
     #omits any NaN
-    data_idx[i,4] = mean(na.omit(data_idx[i,]))
+    data_idx[i,4] = mean(stats::na.omit(data_idx[i,]))
   }
 
   return(data_idx[,4])

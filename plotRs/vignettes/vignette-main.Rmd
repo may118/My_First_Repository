@@ -1,0 +1,77 @@
+---
+title: "vignette-main"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{vignette-main}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+First we want to load our libraries
+```{r setup}
+library(plotRs)
+library(R.matlab)
+```
+
+For our assignment, we want to plot the daily average of 5 chambers for 5 years (2014 to 2018) at our site Turkey Point Deciduous.
+
+Loading the seperate functions from the package
+```{r}
+#we use two .. to go up a directory then find the folder 
+#within windows there is two hidden directories . and .. 
+#the . denotes the current directory and .. is used to go up a directory
+source("..//R//findAvg.R")
+source("../R//readData.R")
+```
+
+Now we can use the function we created to read data from a matlab file without referencing the name directly
+```{r}
+#import data from chamber matlab file
+rsIn = readData('..//inst//extdata//chamData.mat')
+```
+
+Afterwards, we can find the average of the chambers for 5 years by creating a list that contains the 5 years data points 
+```{r}
+master = list()
+i = 1
+
+while(i<6)
+{
+  master[[i]] = findAvg(rsIn,i)
+  i = i+1
+}
+```
+
+Now that we have the data, we want to show it in a couple of plots. We start by creating stacked empty data plots.
+```{r}
+#changing the margins of the data
+par(mar = c(1,1,1,1))
+par(mfrow=c(5,1))
+```
+
+Now we want to run a loop to plot each year within the plots 
+```{r}
+#number for starting year
+year = 2014
+
+#plot the 5 years
+for (i in 1:5)
+{
+  plot(master[[i]], pch = 16, main = year, xlab = "Day of Year", ylab = "Rs (µmol CO2/m2/s)")
+  
+  #set custom x axis
+  axis(1, seq(0,365,25))
+  
+  #set custom y axis
+  axis(2, seq(0,12,2))
+  
+  year = year+1
+}
+```

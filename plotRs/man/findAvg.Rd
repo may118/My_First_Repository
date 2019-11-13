@@ -22,6 +22,3 @@ average data
 \description{
 Uses inported Rs data to find the average of each year
 }
-\examples{
-findAvg(rsIn)
-}

@@ -15,6 +15,3 @@ The R output version of data
 \description{
 Uses R.matlab to read .mat data file into R
 }
-\examples{
-data = readData('inputData.mat')
-}

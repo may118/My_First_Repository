@@ -3,7 +3,7 @@ title: "Plot TPD Rs"
 output: rs_plots
 ---
 
-First we want to install R.matlab 
+First we want to load R.matlab 
 ```{r}
 library(R.matlab)
 ```

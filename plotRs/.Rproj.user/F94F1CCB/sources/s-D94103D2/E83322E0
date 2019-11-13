@@ -5,21 +5,21 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "710997473",
+    "hash" : "3500365975",
     "id" : "E83322E0",
-    "lastKnownWriteTime" : 1573659257,
-    "last_content_update" : 1573659257782,
+    "lastKnownWriteTime" : 1573666810,
+    "last_content_update" : 1573666810318,
     "path" : "E:/Insync/Classes/Geo - 712/Projects/Week 3/my-first-repo/plotRs/R/findAvg.R",
     "project_path" : "R/findAvg.R",
     "properties" : {
-        "cursorPosition" : "10,10",
-        "scrollLine" : "0",
+        "cursorPosition" : "14,1",
+        "scrollLine" : "5",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 2,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
