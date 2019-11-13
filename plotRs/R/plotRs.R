@@ -2,8 +2,11 @@
 source(".//R//findAvg.R")
 source("./R//readData.R")
 
+#load the R.matlab library
+library(R.matlab)
+
 #import data from chamber matlab file
-rsIn = readData('chamData.mat')
+rsIn = readData('.//Inst//extdata//chamData.mat')
 
 #find the average of each chamber for 5 years
 

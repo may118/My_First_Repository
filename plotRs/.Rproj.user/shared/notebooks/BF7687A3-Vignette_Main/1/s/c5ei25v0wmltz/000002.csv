@@ -1,5 +1,0 @@
-"0","#plot the 5 years"
-"0","for (i in 1:5)"
-"0","{"
-"0","  plot(master[[i]], xlab = ""Rs"", ylab = ""Day of Year"")"
-"0","}"

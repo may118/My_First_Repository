@@ -1,6 +1,7 @@
 * installing *source* package 'plotRs' ...
 ** using staged installation
 ** R
+** inst
 ** byte-compile and prepare package for lazy loading
 Error in library(R.matlab) : there is no package called 'R.matlab'
 Error: unable to load R code in package 'plotRs'

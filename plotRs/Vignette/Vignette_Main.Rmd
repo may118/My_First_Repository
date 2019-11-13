@@ -3,6 +3,12 @@ title: "Plot TPD Rs"
 output: rs_plots
 ---
 
+First we want to install R.matlab 
+```{r}
+library(R.matlab)
+```
+
+
 For our assignment, we want to plot the daily average of 5 chambers for 5 years (2014 to 2018) at our site Turkey Point Deciduous.
 
 First, we need to read the data from the matlab file containing all of the data points and for that, we define a function that uses the R.matlab library.
@@ -71,7 +77,7 @@ source("./R//readData.R")
 Now we can use the function we created to read data from a matlab file without referencing the name directly
 ```{r}
 #import data from chamber matlab file
-rsIn = readData('chamData.mat')
+rsIn = readData('.//Inst//extdata//chamData.mat')
 ```
 
 Afterwards, we can find the average of the chambers for 5 years by creating a list that contains the 5 years data points 
